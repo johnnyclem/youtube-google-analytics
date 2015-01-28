@@ -106,7 +106,7 @@ function onPlayerStateChange(event) {
       break;
     case YT.PlayerState.PAUSED:
       if (pauseFlagArray[j] != true) {
-        ga('send', 'event', 'Videos', 'Pause', thisVideoTitle);
+        ga('send', 'event', 'Videos', 'Pause | ' + Math.round(event.target.getCurrentTime()), thisVideoTitle);
         pauseFlagArray[j] = true;
       }
       break;
